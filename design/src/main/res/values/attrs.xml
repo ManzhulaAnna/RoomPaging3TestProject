@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="fontStyleTitle" format="reference"/>
+    <attr name="fontStyleSecondary" format="reference"/>
+    <attr name="fontStyleInfoText" format="reference"/>
+
+    <attr name="navigationView" format="reference"/>
+
+    <attr name="iconImageView" format="reference"/>
+
+    <attr name="retryButton" format="reference"/>
+
+    <attr name="loadingProgress" format="reference"/>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.TestApp.BottomNavigation" parent="Widget.Design.BottomNavigationView">
+        <item name="android:layout_marginStart">0dp</item>
+        <item name="android:layout_marginEnd">0dp</item>
+        <item name="android:background">?android:attr/windowBackground</item>
+    </style>
+
+</resources>

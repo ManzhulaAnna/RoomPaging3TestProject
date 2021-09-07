@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.TestApp.Image.IconImageView" parent="">
+        <item name="android:layout_marginStart">0dp</item>
+        <item name="tint">@color/icon_color</item>
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+    </style>
+
+</resources>

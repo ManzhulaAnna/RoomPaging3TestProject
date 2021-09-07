@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.TestApp.Button.Retry" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:colorBackground">@color/primary_color</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+</resources>

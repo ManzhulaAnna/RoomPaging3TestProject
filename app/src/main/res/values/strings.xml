@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PetProject</string>
+    <string name="title_events">Events</string>
+    <string name="title_favorite">Faves</string>
+    <string name="retry">Retry</string>
+    <string name="error_message_holder">Error: %1$s\nPlease pull to refresh</string>
+    <string name="no_favorites_found">Add some events to Faves list!</string>
+    <string name="no_events_found">No upcoming events at the moment</string>
+    <string name="no_app_to_open_url">There is no browser installed on your device to open the link</string>
+</resources>

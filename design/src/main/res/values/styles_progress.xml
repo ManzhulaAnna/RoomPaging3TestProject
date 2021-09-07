@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.TestApp.Progress.Loading" parent="Widget.AppCompat.ProgressBar">
+        <item name="android:layout_gravity">center</item>
+    </style>
+</resources>

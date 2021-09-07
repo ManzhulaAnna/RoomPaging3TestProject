@@ -1,0 +1,173 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id "kotlin-kapt"
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.freshly"
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdk
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "com.test.TestApp"
+    }
+
+    signingConfigs {
+        release {
+            storeFile rootProject.file('signing/Freshly.jks')
+            storePassword 'FreshlyStore'
+            keyAlias 'frashlyAlias'
+            keyPassword 'FreshlyStore'
+        }
+        debug.initWith(signingConfigs.release)
+    }
+
+    buildTypes {
+        buildTypes.each {
+            it.buildConfigField 'String', 'BASE_URL', "\"https://api.seatgeek.com/\""
+            // You can change the Client ID to your own
+            it.buildConfigField 'String', 'CLIENT_ID', "\"MjE3MTU3MjV8MTYxODQxMDMzNS44NzY4MDQ4\""
+            it.buildConfigField 'long', 'REMOTE_CACHE_TIMEOUT', "1L"
+        }
+
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            signingConfig signingConfigs.debug
+            minifyEnabled false
+            debuggable true
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+android {
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+}
+
+dependencies {
+
+    // Core
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:${versions.kotlin_version}"
+    implementation "androidx.core:core-ktx:${versions.androidx.ktx}"
+
+    // Design, UI
+    implementation project(':design')
+    implementation "com.google.android.material:material:${versions.ui.material}"
+    implementation "androidx.constraintlayout:constraintlayout:${versions.ui.constraint}"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:${versions.ui.swipe}"
+    implementation "androidx.fragment:fragment-ktx:${versions.ui.fragment}"
+
+    // Paging
+    implementation "androidx.paging:paging-runtime-ktx:${versions.paging}"
+
+    // Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:${versions.navigation}"
+    implementation "androidx.navigation:navigation-ui-ktx:${versions.navigation}"
+
+    // Lifecycle
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:${versions.lifecycle}"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.lifecycle}"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:${versions.lifecycle}"
+
+    // Startup
+    implementation "androidx.startup:startup-runtime:${versions.startup}"
+
+    // Timber
+    implementation "com.jakewharton.timber:timber:${versions.timber}"
+
+    // DI
+    implementation "com.google.dagger:hilt-android:${versions.dagger}"
+    kapt "com.google.dagger:hilt-android-compiler:${versions.dagger}"
+
+    // Network
+    implementation "com.squareup.retrofit2:retrofit:${versions.retrofit}"
+    implementation "com.squareup.retrofit2:converter-gson:${versions.retrofit}"
+    implementation "com.squareup.okhttp3:logging-interceptor:${versions.okHttp}"
+
+    // Database
+    implementation "androidx.room:room-runtime:${versions.room}"
+    implementation "androidx.room:room-ktx:${versions.room}"
+    kapt "androidx.room:room-compiler:${versions.room}"
+
+
+    // TEST
+
+    // TEST Junit
+    testImplementation "junit:junit:${versions.test.junit}"
+
+    // TEST Core
+    testImplementation "androidx.arch.core:core-testing:${versions.test.android_core}"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:${versions.test.coroutines}"
+
+    // TEST Mockito
+    testImplementation "org.mockito:mockito-inline:${versions.test.mockito}"
+
+    // TEST Mockk
+    testImplementation "io.mockk:mockk:${versions.test.mockk}"
+
+    // TEST Robolectric
+    testImplementation "org.robolectric:robolectric:${versions.test.robolectric}"
+
+    // TEST DI
+    testImplementation "com.google.dagger:hilt-android-testing:${versions.dagger}"
+    kaptTest "com.google.dagger:hilt-android-compiler:${versions.dagger}"
+
+
+    // ANDROID TEST Junit
+    androidTestImplementation "androidx.test.ext:junit:${versions.android_test.junit}"
+
+    // ANDROID TEST Mockito
+    androidTestImplementation "org.mockito:mockito-core:${versions.android_test.mockito}"
+
+    // ANDROID TEST Espresso
+    androidTestImplementation "androidx.test.espresso:espresso-core:${versions.android_test.espresso}"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:${versions.android_test.espresso}"
+    androidTestImplementation "androidx.test.espresso:espresso-intents:${versions.android_test.espresso}"
+    androidTestImplementation "androidx.test.espresso:espresso-accessibility:${versions.android_test.espresso}"
+    androidTestImplementation "androidx.test.espresso:espresso-web:${versions.android_test.espresso}"
+    androidTestImplementation "androidx.test.espresso.idling:idling-concurrent:${versions.android_test.espresso}"
+
+    // ANDROID TEST DI
+    androidTestImplementation "com.google.dagger:hilt-android-testing:${versions.dagger}"
+    kaptAndroidTest "com.google.dagger:hilt-android-compiler:${versions.dagger}"
+
+    // ANDROID TEST Retrofit mock
+    androidTestImplementation "com.squareup.retrofit2:retrofit-mock:${versions.android_test.retrofit}"
+
+    // ANDROID TEST Uiautomator
+    androidTestImplementation "androidx.test.uiautomator:uiautomator:${versions.android_test.uiautomator}"
+
+    // ANDROID TEST Easymock
+    androidTestImplementation "org.easymock:easymock:${versions.android_test.easymock}"
+}
+
+kapt {
+    correctErrorTypes true
+}

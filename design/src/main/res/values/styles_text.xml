@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.TestApp.Texts.FontStyleTitle" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textSize">18sp</item>
+        <item name="fontStyle">normal</item>
+        <item name="fontWeight">700</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:letterSpacing">-0.005</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/primary_text</item>
+    </style>
+
+    <style name="TextAppearance.TestApp.Texts.FontStyleSecondaryText" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textSize">14sp</item>
+        <item name="fontStyle">normal</item>
+        <item name="fontWeight">700</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:letterSpacing">-0.005</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/secondary_text</item>
+    </style>
+
+    <style name="TextAppearance.TestApp.Texts.FontStyleInfoText" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textSize">18sp</item>
+        <item name="fontStyle">normal</item>
+        <item name="fontWeight">700</item>
+        <item name="android:gravity">center</item>
+        <item name="android:letterSpacing">-0.005</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/info_text</item>
+    </style>
+</resources>

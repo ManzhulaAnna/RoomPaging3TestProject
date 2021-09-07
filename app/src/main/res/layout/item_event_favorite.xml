@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.test.ui.fragments.favorites.FavoritesFragment">
+
+    <com.freshly.design.text.TextTitle
+        android:id="@+id/tvFavEventTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toStartOf="@id/ivFavEventFav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Favorite Event name. Favorite Event name. Favorite Event name." />
+
+    <com.freshly.design.text.TextSecondary
+        android:id="@+id/tvFavEventSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/tvFavEventTitle"
+        app:layout_constraintStart_toStartOf="@id/tvFavEventTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvFavEventTitle"
+        tools:text="Tue, 12 Dec 2021 18:00" />
+
+    <com.freshly.design.image.IconImageView
+        android:id="@+id/ivFavEventFav"
+        android:layout_width="@dimen/icon_width_min"
+        android:layout_height="0dp"
+        android:importantForAccessibility="no"
+        android:paddingStart="@dimen/fav_icon_padding_start"
+        android:paddingEnd="@dimen/fav_icon_padding_end"
+        android:src="@drawable/ic_fav"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_height="40dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

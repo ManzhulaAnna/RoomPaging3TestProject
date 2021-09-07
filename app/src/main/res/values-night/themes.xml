@@ -1,0 +1,32 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.PetProject" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/icon_color</item>
+        <item name="colorPrimaryVariant">@color/icon_color</item>
+        <item name="colorOnPrimary">@color/secondary_text</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorSecondaryVariant">@color/secondary</item>
+        <item name="colorOnSecondary">@color/secondary</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/black</item>
+        <!-- Customize your theme here. -->
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <item name="iconImageView">@style/TextAppearance.TestApp.Image.IconImageView</item>
+
+        <item name="retryButton">@style/TextAppearance.TestApp.Button.Retry</item>
+
+        <item name="fontStyleTitle">@style/TextAppearance.TestApp.Texts.FontStyleTitle</item>
+        <item name="fontStyleSecondary">@style/TextAppearance.TestApp.Texts.FontStyleSecondaryText
+        </item>
+        <item name="fontStyleInfoText">@style/TextAppearance.TestApp.Texts.FontStyleInfoText</item>
+
+        <item name="navigationView">@style/TextAppearance.TestApp.BottomNavigation</item>
+
+        <item name="loadingProgress">@style/TextAppearance.TestApp.Progress.Loading</item>
+    </style>
+</resources>
