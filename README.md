@@ -42,6 +42,7 @@ it.buildConfigField 'String', 'CLIENT_ID', "\"CLIENT_ID\""
 
 ### Requirements
 [Events List Epic Confluence](data/confluence_epic_1.pdf)
+
 [Favourite Events Epic Confluence](data/confluence_epic_2.pdf)
 
 ### Guide through the code and requirements
