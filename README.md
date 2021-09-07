@@ -41,10 +41,8 @@ it.buildConfigField 'String', 'CLIENT_ID', "\"CLIENT_ID\""
 </p>
 
 ### Requirements
-<p align="center">
-<img src="data/confluence_epic_1.pdf" width="32%"/>
-<img src="data/confluence_epic_2.pdf" width="32%"/>
-</p>
+[Events List Epic Confluence](data/confluence_epic_1.pdf)
+[Favourite Events Epic Confluence](data/confluence_epic_2.pdf)
 
 ### Guide through the code and requirements
 * [Guide through the code and requirements on Youtube](https://www.youtube.com/watch?v=zeji4x3UIS4)
