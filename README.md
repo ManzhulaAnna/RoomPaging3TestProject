@@ -1,4 +1,4 @@
-Freshly Test Application
+Pet Application
 ===================
 
 Implementation of the application using the [SeatGeek REST API](https://platform.seatgeek.com/).
